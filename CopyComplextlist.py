@@ -77,3 +77,4 @@ if __name__ == '__main__':
     print(cloned.next.next.next.label)
     print(cloned.random.label)
     print(cloned.next.random.label)
+    
