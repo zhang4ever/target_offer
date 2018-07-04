@@ -56,3 +56,5 @@ if __name__ == '__main__':
     print('stack：%s, min_stack：%s, min:%s' % (solution.stack, solution.min_stack, solution.min()))
     solution.push(0)
     print('stack：%s, min_stack：%s, min:%s' % (solution.stack, solution.min_stack, solution.min()))
+
+    
