@@ -86,4 +86,3 @@ if __name__ == '__main__':
     print(solution.Fibonacci2(n))  # fast and right 
     print(solution.Fibonacci2(n))
     print(solution.Fibonacci4(n))
-
