@@ -84,4 +84,3 @@ if __name__ == '__main__':
     print('\t')
     run_time(solution.delete_node2, head, node3)
     print_list(head)
-
