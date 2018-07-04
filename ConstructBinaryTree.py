@@ -107,3 +107,4 @@ if __name__ == '__main__':
     print('tin:%s' % solution.printTreeByInorder(root))
     print('poster:%s' % solution.printTreeByPosterorder(root))
     print('level:%s' % solution.printTreeByLevel(root))
+    
