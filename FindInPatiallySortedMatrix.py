@@ -4,7 +4,7 @@
 # @File    : FindInPatiallySortedMatrix.py
 # @Time    : 2018-03-22 22:08
 # @Author  : zhang bo
-# @Note    : 
+# @Note    : 判断在一个排序数组中书否存在某个数
 """
 
 '''
