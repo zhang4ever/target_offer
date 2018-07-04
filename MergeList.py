@@ -64,3 +64,5 @@ if __name__ == '__main__':
     printList(head2)
     print('mergedlist1:\t')
     printList(solution.Merge(head1, head2))
+    
+    
