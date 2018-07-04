@@ -4,7 +4,7 @@
 # @File    : MinNumberInRoatedArray.py
 # @Time    : 2018-03-26 14:54
 # @Author  : zhang bo
-# @Note    : 
+# @Note    : 输出旋转数组的最小元素
 """
 
 '''
