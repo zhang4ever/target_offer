@@ -89,4 +89,3 @@ if __name__ == '__main__':
     node4.next = head  # test isListlinkACircle()
     print(solution.isListlinkACircle(head))  # test
 
-
