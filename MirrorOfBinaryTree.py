@@ -81,4 +81,3 @@ if __name__ == '__main__':
     print(printTreeByLevel(root))
     print(printTreeByLevel(solution.Mirror(root)))
     print(printTreeByLevel(root))
-
