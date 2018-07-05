@@ -58,6 +58,9 @@ class Solution:
 
 if __name__ == '__main__':
     solution = Solution()
-    index = 5
-    index = 0
-    print(solution.GetUglyNumber_Solution2(index))
+    index1 = 5
+    index2 = 0
+    index3 = 1500
+    print(solution.GetUglyNumber_Solution2(index1))
+    print(solution.GetUglyNumber_Solution2(index1))
+    print(solution.GetUglyNumber_Solution2(index1))
