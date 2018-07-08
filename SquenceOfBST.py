@@ -4,7 +4,7 @@
 # @File    : SquenceOfBST.py
 # @Time    : 2018-04-09 09:47
 # @Author  : zhang bo
-# @Note    : 后序遍历搜索二叉树
+# @Note    : 后序遍历二叉搜索树
 """
 
 class Solution:

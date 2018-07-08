@@ -51,7 +51,7 @@ class Solution:
             self.findPathRecursively(root.left, expectNumber, current_path, res_paths)
         if root.right:
             self.findPathRecursively(root.right, expectNumber, current_path, res_paths)
-        # 到达叶节点后，由于要地贵点上一层，需要将当前路径回退
+        # 到达叶节点后，由于要递归到上一层，需要将当前路径回退
         current_path.pop()
 
 

@@ -4,7 +4,7 @@
 # @File    : QueueWithTwoStacks.py
 # @Time    : 2018-03-25 19:51
 # @Author  : zhang bo
-# @Note    : 
+# @Note    : 两个栈实现队列
 """
 '''
 问题描述：使用两个栈实现一个队列。实现两个函数push和pop,分别完成在队列的

@@ -4,7 +4,7 @@
 # @File    : NumberOf1InBinary.py
 # @Time    : 2018-03-29 14:59
 # @Author  : zhang bo
-# @Note    : 位运算
+# @Note    : 二进制表示中1的个数
 """
 
 '''

@@ -68,4 +68,3 @@ if __name__ == '__main__':
     print(solution.printMatrix(matrix1))
     print(solution.printMatrix(matrix2))
     print(solution.printMatrix(matrix3))
-

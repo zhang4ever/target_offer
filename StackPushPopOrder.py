@@ -13,7 +13,6 @@ class Solution:
             例如序列1,2,3,4,5是某栈的压入顺序，序列4，5,3,2,1是该压栈序列对应的一个弹出序列，但4,3,5,1,2就不可能是该压栈序列的弹出序列。
     """
     def IsPopOrder(self, pushV, popV):
-
         is_pop_order = False
         stack = []  # 辅助栈
         next_push = 0  # 指针-压栈序列下一个压入的

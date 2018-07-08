@@ -61,4 +61,3 @@ if __name__ == '__main__':
     head_reversed = solution.ReverseList2(head)
     print('reversed list：')
     printList(head_reversed)
-

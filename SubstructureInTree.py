@@ -4,7 +4,7 @@
 # @File    : SubstructureInTree.py
 # @Time    : 2018-04-06 15:04
 # @Author  : zhang bo
-# @Note    : 数树的子结构
+# @Note    : 树的子结构
 """
 class TreeNode:
     def __init__(self, x):
@@ -27,7 +27,6 @@ class Solution:
             if not result:  # 在左子树中没有找到，继续在右子树中寻找
                 result = self.HasSubtree(pRoot1.right, pRoot2)
         return result
-
 
 # 判断tree1中是否含有tree2一样的结构
 def does_tree1_has_tree2(pRoot1, pRoot2):
