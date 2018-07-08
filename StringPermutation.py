@@ -4,7 +4,7 @@
 # @File    : StringPermutation.py
 # @Time    : 2018-04-12 14:58
 # @Author  : zhang bo
-# @Note    : 字符串的排列
+# @Note    : 字符串（数字）的排列组合
 """
 
 class Solution:
