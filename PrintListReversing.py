@@ -4,12 +4,10 @@
 # @File    : PrintListReversing_Recursively.py
 # @Time    : 2018-03-23 19:33
 # @Author  : zhang bo
-# @Note    : 
+# @Note    : 逆序打印链表
 """
 '''
 描述：输入一个链表的头结点，从尾到头打印
-'''
-'''
 思路：先顺序遍历链表的所有节点，然后入栈，最后在出栈就会得到逆序的结果
 '''
 class ListNode:
