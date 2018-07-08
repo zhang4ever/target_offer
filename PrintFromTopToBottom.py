@@ -4,7 +4,7 @@
 # @File    : SquenceOfBST.py
 # @Time    : 2018-04-09 09:47
 # @Author  : zhang bo
-# @Note    : 二叉树的遍历
+# @Note    : 二叉树的层序遍历
 """
 class TreeNode:
     def __init__(self, x):
