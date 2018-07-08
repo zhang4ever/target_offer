@@ -4,7 +4,7 @@
 # @File    : Print1ToMaxOfNDigits.py
 # @Time    : 2018-03-30 11:15
 # @Author  : zhang bo
-# @Note    : 
+# @Note    : 从1到n打印数字
 """
 import time
 
