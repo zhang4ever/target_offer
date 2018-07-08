@@ -94,3 +94,4 @@ if __name__ == '__main__':
     run_time(solution.Power1, base, exponent)
     run_time(solution.Power2, base, exponent)
     run_time(solution.Power3, base, exponent)
+    
