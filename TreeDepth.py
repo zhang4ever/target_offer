@@ -26,37 +26,6 @@ class Solution:
         right_depth = self.TreeDepth(pRoot.right)
         return left_depth + 1 if left_depth > right_depth else right_depth + 1
 
-    '''
-    拓展：判断一个二叉树是不是平衡二叉树(任意节点的左右子树的深度差不超过1).
-    思路1:遍历每个节点的时候，调用deep的函数来计算以该节点为head的深度。
-    '''
-
-    # 该方法的缺点就是每个节点都会重复遍历好多次,时间效率不高
-    def IsBalanced(self, pRoot):
-        if not pRoot:
-            return True
-        # 遍历没和节点
-        left_depth = self.TreeDepth(pRoot.left)
-        right_depth = self.TreeDepth(pRoot.right)
-        if abs(left_depth-right_depth) > 1:
-            return False
-        return self.IsBalanced(pRoot.left) and self.IsBalanced(pRoot.right)
-
-    # 改进的方法：
-    def IsBalanced2(self, pRoot, depth=0):
-        if not pRoot:
-            depth = 0
-            return True
-        left = self.IsBalanced2(pRoot.left, depth)
-        right = self.IsBalanced2(pRoot.right, depth)
-        if abs(left - right) < 1:
-            if left > right:
-                depth = 1 + left
-            else:
-                depth + 1 + right
-            return True
-        return False
-
 
 if __name__ == '__main__':
     solution = Solution()
@@ -68,4 +37,3 @@ if __name__ == '__main__':
     node2.right = node5
     node4.left = node6
     print(solution.TreeDepth(root))
-    print(solution.IsBalanced2(root))
