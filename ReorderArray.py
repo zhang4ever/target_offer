@@ -89,4 +89,3 @@ if __name__ == '__main__':
     print(solution.reOrderArray4(array1, oddFirst))
     print(solution.reOrderArray4(array6, negativeFirst))
     
-    
