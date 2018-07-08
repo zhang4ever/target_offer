@@ -34,7 +34,6 @@ class Sort:
         :param left: 选中的基准位置
         :param right: 列表的最后位置
         """
-
         if len(l) == 0:
             return
         if left < right:
