@@ -4,16 +4,15 @@
 # @File    : ReverseWordsInSentences.py
 # @Time    : 2018-07-10 09:57
 # @Author  : zhang bo
-# @Note    : 反转单词顺序
+# @Note    : 反转单词顺序 VS 左旋转字符串
 """
 
-'''
-    题目描述：输入一个英文句子，翻转句子中的单词的顺序，但单词内部的字符顺序不变
-    示例：输入“I am a student.”, 输出“student. a am I”
-    思路：先将整个字符串的所有字符全部翻转；然后根据空格分割，对单个单词就行翻转。       
-'''
-
 class Solution:
+    """
+        题目描述：输入一个英文句子，翻转句子中的单词的顺序，但单词内部的字符顺序不变
+        示例：输入“I am a student.”, 输出“student. a am I”
+        思路：先将整个字符串的所有字符全部翻转；然后根据空格分割，对单个单词就行翻转。
+    """
     # 解法1：两次反转
     def ReverseSentence(self, s):
         if not s or len(s) == 0:
@@ -72,10 +71,33 @@ class Solution:
         return s_list
 
 
+class Solution2:
+    """
+        题目描述：字符串的左旋转操是指将字符串的前面若干个字符转移到字符串的尾部。
+        示例：输入："abcdefg", 输出"cdefgab"
+        思路：根据n将字符串分为两个部分，然后分别对两个字符串进行反转，再拼接；最后在对拼接后的在反转一次即可。
+    """
+    def LeftRoatateString(self, s, n):
+        if not s or len(s) == 0 or len(s) < n or n <0:
+            return ''
+        s = list(s)
+        s1 = solution.Reverse(s[:n])
+        s2 = solution.Reverse(s[n:])
+        print(s1)
+        res = solution.Reverse(s1+s2)
+        return ''.join(res)
+
+
 if __name__ == '__main__':
     solution = Solution()
     s1 = 'I am a student.'
     s2 = ''
+    s = 'abcdefg'
     print(solution.ReverseSentence(s1))
     print(solution.ReverseSentence2(s1))
     print(solution.ReverseSentence3(s1))
+
+    solution2 = Solution2()
+    s = 'abcdefg'
+    n = 2
+    print(solution2.LeftRoatateString(s, n))
