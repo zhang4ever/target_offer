@@ -9,8 +9,8 @@
 '''
 题目描述：输入一个正数s,打印出所有和为s的连续正数序列（至少两个数）。
 示例：例如输入15, 输出{(1,2,3,4,5), (4,5,6), (7,8)}
-思路1：设置两个标志small和big来记录当前子序列的最小值(初始为1,2)。sum(small, big)大于tsum, small+1;如果小于，big+1;如果等于， 
-      print同时big+1;       
+思路1：设置两个标志small和big来记录当前子序列的最小值(初始为1,2)。sum(small, big)大于tsum, small+1;
+      如果小于，big+1;如果等于，print同时big+1;       
 '''
 
 class Solution:
