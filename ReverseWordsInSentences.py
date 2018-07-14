@@ -11,7 +11,7 @@ class Solution:
     """
         题目描述：输入一个英文句子，翻转句子中的单词的顺序，但单词内部的字符顺序不变
         示例：输入“I am a student.”, 输出“student. a am I”
-        思路：先将整个字符串的所有字符全部翻转；然后根据空格分割，对单个单词就行翻转。
+        思路；然后根据空格分割，对单个单词就行翻转。
     """
     # 解法1：两次反转
     def ReverseSentence(self, s):
@@ -19,7 +19,7 @@ class Solution:
             return ''
         s_list = list(s)
         self.Reverse(s_list)  # 整体翻转
-        start, end = 0, 0
+        start, end = 0,
         res = []  # 由于字符串不可改变，所以新建一个list来保存反转后的结果
         while end < len(s):
             if end == len(s) - 1:  # 句子末尾
