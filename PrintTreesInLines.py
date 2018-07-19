@@ -30,6 +30,7 @@ class Solution:
         toBePrint = 1  # 要打印的层上的节点个数
         nextLevel = 0  # 下一层要打印的节点的个数
         while queue:
+
             current = queue.pop()  # 出队
             print(current.val, end=' ')
             curr_res.append(current.val)
