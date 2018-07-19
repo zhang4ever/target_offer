@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-# @File    : SquenceOfBST.py
+# @File    : PrintTreesFromTopToBottom.py
 # @Time    : 2018-04-09 09:47
 # @Author  : zhang bo
 # @Note    : 二叉树的层序遍历
@@ -16,6 +16,7 @@ class TreeNode:
 class Solution:
     """
     从上往下打印出二叉树的每个节点，同层节点从左至右打印。
+    思路：使用队列。先将头节点加入队列， 然后打印头节点，将头节点出队列，并将头节点的左孩子和右孩子以此加入队列。
     """
     def PrintFromTopToBottom(self, root):
         if not root:
