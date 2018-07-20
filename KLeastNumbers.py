@@ -16,14 +16,22 @@
 
 
 class Solution:
-    # 解法1：快速排序思路，时间复杂度O(n)
+    # 采用快速排序的分区思路，但不需要进行完整的排序
     def GetLeastNumbers_Solution(self, tinput, k):
         if len(tinput) < 0 or k <= 0 or len(tinput) < k or tinput is None:
-            return []
+            return
         left = 0
-        right = len(tinput)-1
-        self.quickSort(tinput, left, right)
-        return [i for i in tinput[:k]]
+        right = len(tinput) - 1
+        index = self.Partition(tinput, left, right)  # 找到划分的位置
+        while index != k-1:
+            if index > k-1:  # 说明要的结果在基准的左侧
+                right = k-1
+                index = self.Partition(tinput, left, right)
+            else:  # 说明要的结果在基准的两侧都有
+                left = index + 1
+                index = self.Partition(tinput, left, right)
+        # 找到了最合适的划分位置，这样划分后，base前面的数就刚好是最小的k个，但是不一定是排好序的
+        return tinput[:k]
 
     # 解法2： 最大堆， 时间复杂度O(n*logk)，且不需要修改原始的数组，所有的操作都在容器中进行。适合处理大量数据
     def GetLeastNumbers_Solution2(self, tinput, k):
@@ -45,6 +53,14 @@ class Solution:
                     continue
         return res[::-1]
 
+    # 解法3：直接快速排序，时间复杂度O(nlogn)
+    def GetLeastNumbers_Solution3(self, tinput, k):
+        if len(tinput) < 0 or k <= 0 or len(tinput) < k or tinput is None:
+            return []
+        left = 0
+        right = len(tinput) - 1
+        self.quickSort(tinput, left, right)
+        return tinput[:k]
 
     # 快速排序
     def quickSort(self, l, left, right):
@@ -63,20 +79,35 @@ class Solution:
                     tmp = l[i]
                     l[i] = l[j]
                     l[j] = tmp
-
-            l[left] = l[i]  # i=j时，找到基准该呆的位置
+            # i=j时，找到基准该呆的位置,此时会将数组以base划分为两部分，比base小的在base的左边，比base大的在base的右边
+            l[left] = l[i]
             l[i] = base
-            print(l)
+            # print(l)
             # 2.基准将原始列表划分两部分，分别对两部分进行递归
             self.quickSort(l, left, i - 1)
             self.quickSort(l, i + 1, right)
 
+    # 分组思路，使用快速排序的做法,返回划分的位置
+    def Partition(self, l, left, right):
+        base = l[left]
+        i, j = left, right
+        while i != j:
+            while l[j] > base and i < j:
+                j -= 1
+            while l[i] < base and i < j:
+                i += 1
+            # 各自找到需要交换的元素，就交换
+            l[i], l[j] = l[j], l[i]
+        # i=j,找打到了基准的值该在的位置，返回
+        return i
+
 
 if __name__ == "__main__":
     solution = Solution()
-    tinput1 = [4, 5, 1, 6, 2, 7, 3, 8]
+    tinput1 = [3, 4, 1, 7, 6, 2, 0]
     tinput2 = []
     tinput3 = [1, 2, 3]
-    k = 8
+    k = 5
     print(solution.GetLeastNumbers_Solution(tinput1, k))
     print(solution.GetLeastNumbers_Solution2(tinput1, k))
+    print(solution.GetLeastNumbers_Solution3(tinput1, k))
